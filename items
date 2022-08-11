@@ -1,0 +1,17 @@
+class Item:
+
+    def __init__(self,name,quantity,unit,price):
+        self.name = name
+        self.quantity = quantity
+        self.unit = unit
+        self.price = price
+
+    #dodać settery do price, quantity
+
+    def get_price(self):
+        return float(self.price)
+
+    def get_full_info(self):
+        return f"ID: {self.id_item}, nazwa produktu: {self.name}, dostępna ilość: {self.quantity}, jednostka: {self.unit}," \
+               f"cena: {self.price}"
+    
