@@ -1,8 +1,10 @@
 Aplikacja do obsługi magazynu.
 
 Dostępne funkcjonalności:
-> Rejestrowanie uzytkowników
-    - User musi mieć unikalny login/username
+> Rejestrowanie uzytkowników - dostęp z panelu admina
+    - User musi mieć unikalny login
+> Rejestrowanie klientów - dostęp dla zarejestrowanych użytkowników
+    - każdy klient musi mieć unikalne ID, NIP
 > Logowanie w aplikacji
     - By user mógł się zalogować, musi podać poprawny login i hasło
     - Dodatkowo jego konto nie może być zablokowane, blokada następuje gdy user trzy razy wprowadzi nieprawidłowe hasło
@@ -20,11 +22,13 @@ Dostępne funkcjonalności:
 
 Techniczna strona:
 > Program uruchamia się poprzez główny plik - main.py
-> Struktura programu: main.py odpowiada za autoryzację użytkownika, po udanej autoryzacji program przekierowuje się na plik view_controller, gdzie wywołuje funkcjonalności z pliku "functions"
+> Struktura programu: main.py odpowiada za autoryzację użytkownika, po udanej autoryzacji
+program przekierowuje się na plik view_controller, gdzie wywołuje funkcjonalności z pliku "functions"
 > Obiekty przedmiotów i Usera są odpowiedmio w plikach "Items.py" i "User.py".
-> Baza danych to sqllite (plik stock.db)
+> Baza danych to mysql (plik stock)
 
 
 Potrzebne importy do programu:
 import sqlite3
 import os
+
